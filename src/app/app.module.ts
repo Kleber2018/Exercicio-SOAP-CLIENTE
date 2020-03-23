@@ -8,9 +8,10 @@ import {
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
-import { NgxSoapModule } from 'ngx-soap';
+// import { NgxSoapModule } from 'ngx-soap';
 import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgxSoapModule } from 'projects/ngx-soap/src/public_api';
 
 const ANGULAR_MATERIAL_MODULES = [
   MatToolbarModule, MatInputModule, MatButtonModule, MatCardModule,
