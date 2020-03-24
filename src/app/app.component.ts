@@ -51,52 +51,37 @@ export class AppComponent {
     //   err => console.log(err)
     // );
   }
-    multiplicacao() {
+   Multiplicacao() {
     this.loading = true;
     const body = {
       intA: this.intA,
       intB: this.intB
     };
 
-    this.client.call('multiplicacao', body).subscribe(res => {
+    this.client.call('Multiplicacao', body).subscribe(res => {
       console.log('method response', res);
       this.xmlResponse = res.xml;
-      this.message = res.result.AddResult;
+      this.message = res.result.MultiplicacaoResult;
       this.loading = false;
     }, err => console.log(err));
   }
 
-  divisao() {
+  Divisao() {
     this.loading = true;
     const body = {
       intA: this.intA,
       intB: this.intB
     };
 
-    this.client.call('divisao', body).subscribe(res => {
+    this.client.call('Divisao', body).subscribe(res => {
       console.log('method response', res);
       this.xmlResponse = res.xml;
-      this.message = res.result.AddResult;
+      this.message = res.result.DivisaoResult;
       this.loading = false;
     }, err => console.log(err));
 
   }
-  subtract2() {
-    this.loading = true;
-    const body = {
-      intA: this.intA,
-      intB: this.intB
-    };
-
-    this.client.call('subtracao', body).subscribe(res => {
-      console.log('method response', res);
-      this.xmlResponse = res.xml;
-      this.message = res.result.AddResult;
-      this.loading = false;
-    }, err => console.log(err));
-
-  }
-  
+    
 
   subtract() {
     this.loading = true;
