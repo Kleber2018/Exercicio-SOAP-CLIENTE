@@ -19,7 +19,7 @@ export class AppComponent {
   client: Client;
 
   constructor(private soap: NgxSoapService) {
-    this.soap.createClient('assets/calculator.wsdl')
+    this.soap.createClient('https://obscure-plains-72326.herokuapp.com/wscalc1/?wsdl')
       .then(client => {
         console.log('Client', client);
         this.client = client;
